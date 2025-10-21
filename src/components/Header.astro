@@ -1,0 +1,127 @@
+---
+import MenuIcon from "./MenuIcon.astro";
+import ExitIcon from "./ExitIcon.astro";
+---
+
+<div class="masthead-bar">
+    <div id="mobile-menu-toggle"><MenuIcon /></div>
+</div>
+<nav id="navbar">
+    <ul>
+        <li id="mobile-menu-exit"><ExitIcon /></li>
+        <li><a href="/">home</a></li>
+        <li><a href="/capabilities">capabilities</a></li>
+        <li><a href="/about">about</a></li>
+        <li><a href="/contact">contact</a></li>
+    </ul>
+</nav>
+<script>
+    document.getElementById("mobile-menu-toggle").addEventListener("click", menuToggle);
+    document.getElementById("mobile-menu-exit").addEventListener("click", menuToggle);
+
+    function menuToggle() {
+        document.getElementById("navbar").classList.toggle("active");
+    }
+</script>
+<style>
+
+    .masthead-bar {
+        width: 100%;
+        align-items: center;
+        display: flex;
+        justify-content: end;
+        position: fixed;
+        padding: 2rem;
+        z-index: 1000;
+    }
+    .masthead-bar #mobile-menu-toggle {
+        display: block;
+    }
+
+    nav {
+        border: unset;
+        border-radius: unset;
+        margin: auto;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(20, 20, 20, 0);
+        backdrop-filter: blur(0px);
+        transform: translateX(100%);
+        z-index: 1000;
+    }
+
+    nav.active {
+        transition:
+            backdrop-filter 500ms cubic-bezier(0.4, 0, 0.2, 1),
+            background 500ms cubic-bezier(0.4, 0, 0.2, 1);
+        transform: translateX(0%);
+        backdrop-filter: blur(10px);
+        background: var(--brand-orange);
+    }
+
+    nav ul {
+        list-style-type: none;
+        padding-inline-start: unset;
+        display: block;
+        margin-block-start: unset;
+        margin-block-end: unset;
+        padding: 1rem;
+        text-align: right;
+        transform: translateX(100%);
+    }
+    nav.active ul {
+        transform: translateX(0);
+        transition: all 500ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    nav ul li {
+        display: block;
+        border: none;
+        background: none;
+        padding: .5rem 0.25rem;
+    }
+    nav ul li a {
+        background: none;
+        border: none;
+        font-size: 1.75rem;
+        color: var(--white);
+        font-family: var(--header-font-family);
+        font-weight: var(--header-font-weight);
+        font-style: var(--header-font-style);
+        margin: auto 1rem;
+        text-transform: lowercase;
+        text-decoration: unset;
+    }
+    /* #mobile-menu-exit {
+        display: block;
+        text-align: right;
+        padding: 1rem;
+    }
+    #mobile-menu-exit span {
+        padding: 0.5rem 1rem;
+        font-size: 1.5rem;
+    } */
+
+     @media (min-width: 768px) {
+        nav ul {
+            padding: 2rem 6rem;
+        }
+        nav.active ul {
+        transform: translateX(0);
+        transition: all 700ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+        nav ul li a {
+        /* transform: scale(1.25); */
+        font-size: 1.75rem;
+        transition: all 400ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    nav ul li a:hover {
+        /* transform: scale(1.25); */
+        font-size: 2rem;
+        transition: all 400ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+     }
+</style>

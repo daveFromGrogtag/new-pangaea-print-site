@@ -1,0 +1,51 @@
+---
+const { label, link, variant } = Astro.props;
+---
+
+<button class={variant}><a href={link}>{label}</a></button>
+<style>
+    button a {
+        color: unset;
+        text-decoration: unset;
+    }
+
+    button {
+        font-family: var(--para-font-family);
+        font-weight: 600;
+        font-style: var(--para-font-style);
+        /* font-size: 16px; */
+        font-size: 1rem;
+        padding: 8px 24px;
+        border-radius: 8px;
+        border: 2px solid var(--brand-orange);
+        margin: 1rem 0
+    }
+
+    button.btn-standard {
+        background: var(--brand-orange);
+        color: var(--white);
+    }
+
+    button.btn-standard:hover {
+        background: var(--brand-orange);
+        color: var(--white);
+        opacity: 0.9;
+    }
+
+    button.btn-outline {
+        background: var(--white);
+        color: var(--brand-orange);
+    }
+
+    button.btn-outline:hover {
+        color: var(--white);
+        background: var(--brand-orange);
+        opacity: 0.9;
+    }
+
+    button.wide {
+        width: 100%;
+        font-size: 1.25rem;
+        padding: 16px 32px;
+    }
+</style>

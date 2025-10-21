@@ -1,11 +1,94 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
+// import Welcome from '../components/Welcome.astro';
+import Layout from "../layouts/Layout.astro";
+import BillboardVideo from "../components/billboardVideo.astro";
+import Button from "../components/Button.astro";
+import CapabilitiesTileContainer from "../components/CapabilitiesTileContainer.astro";
+import ContactForm from "../components/ContactForm.astro";
+// background="https://plus.unsplash.com/premium_photo-1675355675326-0bdc971f2558?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Home">
+	<BillboardVideo background="https://plus.unsplash.com/premium_photo-1675355675326-0bdc971f2558?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+		<h1 style="color: white;">Where big ideas take shape</h1>
+				<div class="spacer-32px"></div>
+		<p style="color: white;" class="billboard-text">
+			Large format printing serving the Sacramento region for signage,
+			wraps, murals, and decals, plus design and fulfillment support to
+			keep your brand moving.
+		</p>
+		<div class="spacer-1"></div>
+		<Button label="Say hi" variant="btn-standard" link="/" />
+	</BillboardVideo>
+	<section class="why-pangaea">
+		<div class="container">
+			<div class="section-pair">
+				<div class="logo-image-container">
+					<div>
+						<img src="/src/assets/small-logo.png" alt="Pangaea Print" />
+					</div>
+				</div>
+				<div>
+					<h2>Why print with pangaea</h2>
+					<div class="spacer-32px"></div>
+
+					<p>
+						<b
+							>We're a creative print shop in West Sacramento with a
+							serious respect for the craft.</b
+						> Our process is built on clear communication, fast turnarounds,
+						and attention to the details that matter, like color accuracy, clean
+						installs, and hitting deadlines every time.
+					</p>
+					<p>
+						Whether you're printing signage for a storefront, wrapping a
+						fleet of vehicles,or kitting promo boxes for an event, we'll
+						help you pull it off from start to finish. We're collaborative,
+						consistent, and focused on making your project a success.
+					</p>
+					<p>No fuss. No stress. Just great print, done right.</p>
+					<Button label="Start a Project" link="/" variant="btn-standard"/><span class="spacer-1"></span>
+					<Button label="Meet the Team" link="/" variant="btn-outline" />
+				</div>
+				<!-- <div class="spacer-1"></div> -->
+			</div>
+		</div>
+	</section>
+	<section class="we-print">
+		<div class="container">
+			<h2 class="reverse">we print big things</h2>
+			<h3 class="reverse">and small things</h3>
+			<h3 class="reverse">and sticky things</h3>
+			<h3 class="reverse">
+				we design things, code things, and ship things
+			</h3>
+			<h3 class="reverse">
+				from one-off wonders top full-scale rollouts, we make it happen.
+			</h3>
+			<Button label="View Capabilities" link="/" variant="btn-standard" />
+		</div>
+	</section>
+	<section>
+			<CapabilitiesTileContainer/>
+	</section>
+	<section class="say-hi">
+		<div class="container">
+			<div class="section-pair">
+				<div class="speech">
+					<div class="spacer-1"></div>
+					<img src="/src/assets/big-fans-of-hellos_come-say-hi.svg" alt="Big fans of hellos. Come say hi!">
+					<div class="spacer-1"></div>
+	
+				</div>
+				<div class="contact-form">
+					<h2>Ready to print something? start here.</h2>
+					<div class="spacer-32px"></div>
+					<p><b>Got files, questions, or a half-formed idea?</b> We handle large format printing, signage, decals, and more across the Sacramento region and the Bay Area. Tell us what you're making - we'd love to chat.</p>
+					<ContactForm/>
+				</div>
+			</div>
+		</div>
+	</section>
 </Layout>

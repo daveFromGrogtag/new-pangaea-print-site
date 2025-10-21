@@ -1,0 +1,46 @@
+---
+import CapabilitiesTile from "./CapabilitiesTile.astro";
+---
+<div class="teal-medium">
+    <div class="container">
+        <div class="grid">
+            <CapabilitiesTile
+                title="Large Format & Digital Printing"
+                description="You know what this is, don't you?"
+                link="https://www.google.com/"
+            /><CapabilitiesTile
+                title="Large Format & Digital Printing"
+                description="You know what this is, don't you?"
+                link="https://www.google.com/"
+            /><CapabilitiesTile
+                title="Large Format & Digital Printing"
+                description="You know what this is, don't you?"
+                link="https://www.google.com/"
+            /><CapabilitiesTile
+                title="Large Format & Digital Printing"
+                description="You know what this is, don't you?"
+                link="https://www.google.com/"
+            /><CapabilitiesTile
+                title="Large Format & Digital Printing"
+                description="You know what this is, don't you?"
+                link="https://www.google.com/"
+            /><CapabilitiesTile
+                title="Large Format & Digital Printing"
+                description="You know what this is, don't you?"
+                link="https://www.google.com/"
+            />
+        </div>
+    </div>
+</div>
+<style>
+    div.teal-medium {
+        background-color: var(--teal-medium);
+    }
+    @media (min-width: 768px) {
+        div.grid {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr; /* 3 equal columns */
+        }
+    }
+</style>

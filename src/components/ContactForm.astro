@@ -1,0 +1,68 @@
+---
+import Button from "./Button.astro";
+---
+
+<form
+    
+>
+    <div class="input-pair">
+        <div class="input-set">
+            <label for="firstName">First name</label>
+            <input type="text" name="firstName" id="firstName" placeholder="Jane" required/>
+        </div>
+        <div class="spacer-1"></div>
+        <div class="input-set">
+            <label for="lastName">Last name</label>
+            <input type="text" name="lastName" id="lastName" placeholder="Doe" required/>
+        </div>
+    </div>
+    <div class="input-set">
+        <label for="email">Email address</label>
+        <input type="email" name="email" id="email" placeholder="j.doe@example.com" required />
+    </div>
+    <div class="input-set">
+        <label for="message">Your message</label>
+        <textarea name="message" id="message" placeholder="Add your message here..." required></textarea>
+    </div>
+    <div class="spacer-1"></div>
+    <Button label="Send Message" variant="btn-standard wide" />
+    <div class="spacer-1"></div>
+</form>
+<style>
+    label {
+        color: var(--grey-text);
+        font-size: .875rem;
+        margin-top: 1rem;
+        margin-bottom: .5rem;
+    }
+
+    input, textarea {
+        padding: .75rem;
+        border-radius: 8px;
+        border: 1px solid var(--extra-light-grey);
+        color: var(--grey-text);
+        box-shadow: 0px 1px 2px 0px #0000000d;
+        font-size: 1rem;
+    }
+    input::placeholder, textarea::placeholder {
+        opacity: .5;
+    }
+
+    textarea {
+        height: 165px;
+    }
+
+    .input-pair {
+        display: flex;
+        width: 100%;
+    }
+    .input-pair input {
+        width: 100%;
+    }
+
+    .input-set label, .input-set input, .input-set textarea {
+        display: block;
+        width: 100%;
+    }
+    .input-set 
+</style>

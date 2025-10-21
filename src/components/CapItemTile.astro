@@ -1,0 +1,83 @@
+---
+const { heading, description, image, reverse = false } = Astro.props;
+---
+
+<div
+    class={reverse ? "reverse item-tile" : "item-tile"}
+    style=`background: url(${image}) no-repeat center;background-size: cover;`
+>
+    <div class={reverse ? "reverse bubble" : "bubble"}>
+        <div class="item-text">
+            <h3>{heading}</h3>
+            <p>{description}</p>
+        </div>
+    </div>
+</div>
+<style>
+    .item-tile {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .reverse.item-tile {
+        justify-content: center;
+    } 
+    .item-text {
+        /* padding: 2rem; */
+    }
+
+    .item-text h3 {
+        text-align: right;
+        color: var(--brand-teal);
+    }
+
+    .item-text p {
+        color: var(--brand-teal);
+        text-align: right;
+    }
+
+    .bubble {
+        background-color: var(--brand-gold-80);
+        border-radius: 10rem 10rem 0 10rem;
+        width: 385px;
+        height: 327px;
+        margin: 2rem;
+        padding: 4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .reverse.bubble {
+        background-color: var(--brand-gold-80);
+        border-radius: 10rem 10rem 10rem 0;
+        width: 385px;
+        height: 327px;
+        margin: 2rem;
+        padding: 4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .reverse .item-text h3 {
+        text-align: left;
+        color: var(--brand-teal);
+    }
+
+    .reverse .item-text p {
+        color: var(--brand-teal);
+        text-align: left;
+    }
+
+    /* .item-text {
+        padding: 2rem;
+        backdrop-filter: blur(4px) saturate(20%);
+        transition: backdrop-filter linear 200ms;
+    }
+    .item-text:hover {
+        backdrop-filter: blur(0px) saturate(100%);
+        transition: backdrop-filter linear 200ms;
+    } */
+</style>

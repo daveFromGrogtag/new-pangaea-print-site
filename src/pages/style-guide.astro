@@ -1,0 +1,39 @@
+---
+import Layout from "../layouts/Layout.astro"
+import Footer from "../components/Footer.astro"
+import Button from "../components/Button.astro"
+---
+
+<Layout title="Style Guide">
+<div class="container">
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+    <p>Paragraph test. Lorem ipsum dolor sit amet consectetur adipisicing elit. <b>Bolder than bold.</b> <em>Italicer than italic.</em> Possimus veniam blanditiis, modi pariatur inventore iusto laboriosam mollitia ratione temporibus nulla aspernatur placeat, recusandae reprehenderit qui, repellat delectus sapiente maxime necessitatibus. </p>
+    <button class="btn-standard">Standard</button>
+    <button class="btn-outline">Outlined</button>
+    <Button label="Test Button" link="/" variant="btn-standard"/>
+    <Button label="Test Button" link="/" variant="btn-outline"/>
+</div>
+    <div class="teal-background">
+        <div class="container">
+            <h1 class="reverse">Reverse Heading 1</h1>
+            <h2 class="reverse">Reverse Heading 2</h2>
+            <h3 class="reverse">Reverse Heading 3</h3>
+            <h4 class="reverse">Reverse Heading 4</h4>
+        </div>
+    </div>
+    <div class="color-square-container">
+        <div class="color-square brand-orange"></div>
+        <div class="color-square brand-gold"></div>
+        <div class="color-square brand-teal"></div>
+        <div class="color-square teal-medium"></div>
+        <div class="color-square charcoal-main"></div>
+        <div class="color-square white"></div>
+        <div class="color-square off-white"></div>
+    </div>
+    <div id="teal-main"></div>
+    <!-- <div class="speech-bubble-p"></div> -->
+</Layout>
+

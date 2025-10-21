@@ -1,0 +1,68 @@
+---
+const {
+    heading,
+    description,
+    background,
+    textColor,
+    reverse = false,
+} = Astro.props;
+---
+
+<div class={reverse ? "both-sides reverse" : "both-sides"}>
+    <div
+        class="cat-side"
+        style=`background: ${background}; color: ${textColor};`
+    >
+        <div class="cat-text">
+            <div class="cat-text-inner">
+                <h2 style=`color: ${textColor};`>{heading}</h2>
+                <br />
+                <p style=`color: ${textColor};`>{description}</p>
+            </div>
+        </div>
+    </div>
+    <div class="item-side">
+        <slot />
+    </div>
+</div>
+<style>
+    .cat-side {
+        padding: 4rem 2rem;
+        display: flex;
+        justify-content: center;
+    }
+    @media (min-width: 768px) {
+    .both-sides {
+        width: 100%;
+        display: flex;
+    }
+
+    .both-sides.reverse {
+        flex-direction: row-reverse;
+    }
+    .cat-side {
+        display: block;
+        flex-grow: 1;
+        max-width: 40%;
+        position: relative;
+    }
+    .item-side {
+        flex-grow: 1;
+    }
+    .cat-text {
+        /* background-color: red; */
+        padding: 4rem;
+        top: 50vh;
+        right: 0;
+        position: sticky;
+        display: flex;
+        justify-content: end;
+    }
+    .reverse .cat-text {
+        justify-content: start;
+    }
+    .cat-text-inner {
+        max-width: 500px;
+    }
+    }
+</style>

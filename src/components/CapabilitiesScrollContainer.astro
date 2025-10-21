@@ -1,0 +1,87 @@
+---
+import CapCatTile from "./CapCatTile.astro";
+import CapItemTile from "./CapItemTile.astro";
+---
+
+<!-- <div class="container"> -->
+<CapCatTile
+    heading="Big Stuff"
+    description="Your brand but bigger. Think banners, backdrops, wall coverings, vehicle wraps, and trade show displays. Our large format printing services make your brand visible on the biggest stages—from retail roll-outs to event graphics."
+    background="var(--brand-teal)"
+    textColor="var(--white)"
+>
+    <CapItemTile heading="large format printing" description="Oversized posters, event banners, and graphics that deliver large-scale visibility for retail, events, and public spaces." image="https://plus.unsplash.com/premium_photo-1675355675326-0bdc971f2558?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/>
+    <CapItemTile heading="vehicle wraps" description="Full or partial wraps that turn cars, vans, and fleets into mobile billboards with durable finishes." image="https://images.unsplash.com/photo-1755397467747-6160983f9694?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/>
+    <CapItemTile heading="trade show & wayfinding displays" description="Booth signage, backdrops, and directional graphics that attract attention and keep crowds moving." image="https://images.unsplash.com/photo-1759721367037-232697bcd378?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/>
+    <CapItemTile heading="graphics & wall coverings" description="Custom murals, textures, and coverings that transform plain walls into branded experiences. " image="https://images.unsplash.com/photo-1732722606178-a4f40b1a9253?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw5NXx8fGVufDB8fHx8fA%3D%3D"/>
+</CapCatTile>
+
+<CapCatTile
+    heading="small stuff"
+    description="Leave your mark. From stickers and decals to short-run digital printing for fliers, collateral, and campaign materials, these small-scale pieces are fast to produce, easy to distribute, and designed to keep your brand top of mind."
+    background="var(--brand-teal)"
+    textColor="var(--white)"
+    reverse=true
+>
+    <CapItemTile heading="digital printing" description="Collateral, flyers, brochures, postcards, and short-run projects with fast turnaround and flexible options that keep campaigns moving." image="https://images.unsplash.com/photo-1755397467747-6160983f9694?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" reverse=true/>
+    <CapItemTile heading="stickers & custom decals" description="Die-cut, durable, and designed to last. Perfect for promotions, activations, and giveaways." image="https://images.unsplash.com/photo-1759721367037-232697bcd378?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" reverse=true/>
+    <CapItemTile heading="signage & window decals" description="The everyday essentials: indoor and outdoor signage like window vinyl, yard signs, and A-frames that keep your brand visible." image="https://images.unsplash.com/photo-1732722606178-a4f40b1a9253?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw5NXx8fGVufDB8fHx8fA%3D%3D" reverse=true/>
+</CapCatTile>
+
+<CapCatTile
+    heading="online stuff"
+    description="Click. Print. Ship. Done. With custom storefronts, e-commerce tools, and fulfillment services, you can manage projects, track orders, and ship anywhere with ease."
+    background="var(--brand-teal)"
+    textColor="var(--white)"
+>
+    <CapItemTile heading="fulfillment" description="Print, kit, pack, and ship on time with tracking you can trust. From pick-and-pack to inventory management, we get your projects out the door and into the world." image="https://images.unsplash.com/photo-1755397467747-6160983f9694?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/>
+    <CapItemTile heading="online solutions & e-commerce" description="Branded portals and web-to-print tools make reordering simple, scalable, and stress-free." image="https://images.unsplash.com/photo-1759721367037-232697bcd378?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/>
+</CapCatTile>
+
+<CapCatTile
+    heading="creative stuff"
+    description="More than print. From design support to promo sourcing and corporate gifting, our creative services bring your ideas full circle, making sure your brand connects across every touchpoint."
+    background="var(--brand-teal)"
+    textColor="var(--white)"
+    reverse=true
+>
+    <CapItemTile heading="design services" description="File prep, layouts, and creative support that ensure your artwork is production-ready for press." image="https://images.unsplash.com/photo-1755397467747-6160983f9694?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" reverse=true/>
+    <CapItemTile heading="event promo & corporate gifting" description="Branded merchandise and thoughtful gifts that extend your campaign beyond the page. " image="https://images.unsplash.com/photo-1759721367037-232697bcd378?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" reverse=true/>
+</CapCatTile>
+<!-- </div> -->
+<!-- <style>
+    #backgrounder {
+        display: flex;
+    }
+    .cap-category {
+        /* position: relative; */
+    }
+
+    .cap-category-tile {
+        background: green;
+        /* position: absolute; */
+    }
+    .cap-item-tile {
+        height: 100vh;
+    }
+    .blue {
+        background: lightblue;
+    }
+    .red {
+        background: lightcoral;
+    }
+</style>
+<script>
+    const screenTester = document.getElementById("last-one");
+    const backgrounder = document.getElementById("backgrounder");
+    window.addEventListener("scroll", () => {
+        console.log(`Element = ${screenTester.getBoundingClientRect().bottom}`);
+        if (screenTester.getBoundingClientRect().bottom > 0) {
+            backgrounder.classList.add("blue");
+            backgrounder.classList.remove("red");
+        } else {
+            backgrounder.classList.remove("blue");
+            backgrounder.classList.add("red");
+        }
+    });
+</script> -->

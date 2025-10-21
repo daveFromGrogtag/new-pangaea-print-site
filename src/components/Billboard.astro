@@ -1,0 +1,50 @@
+---
+const { background } = Astro.props;
+let backgroundImage = background
+    ? "background: url(" +
+      background +
+      ") no-repeat center;background-size: cover;"
+    : "background: lightblue;";
+---
+
+<div class="billboard">
+<div class="billboard" style={backgroundImage}>
+    <div class="bottom-text">
+        <div class="container">
+            <div class="text-box">
+                <slot />
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    .billboard {
+        position: relative;
+        height: 100vh;
+        overflow: hidden;
+
+    }
+    .billboard p {
+        color: var(--teal-medium);
+        font-weight: 600;
+    }
+    .bottom-text {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        background-color: ;
+    }
+
+    .text-box {
+        padding: 2rem;
+        max-width: 800px;
+        background: var( --brand-gold-80);
+        border-radius: 2rem;
+    }
+
+    @media (min-width: 768px) {
+        .bottom-text {
+            bottom: 15%;
+        }
+    }
+</style>

@@ -1,0 +1,36 @@
+---
+const { title, description, link, background } = Astro.props;
+---
+
+<div>
+    <a href={link}>
+        <h3>{title}</h3>
+        <p>{description}</p>
+    </a>
+</div>
+<style>
+    div a {
+        color: unset;
+        text-decoration: unset;
+    }
+
+    div {
+        background: var(--teal-medium);
+        padding: 2rem;
+        text-align: center;
+        min-height: 325px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    div h3 {
+        color: var(--white);
+    }
+    div p {
+        color: var(--white);
+    }
+    div:hover {
+        transition: all 250ms linear;
+        background: var(--brand-teal);
+    }
+</style>
