@@ -10,10 +10,30 @@ import CapItemTile from "./CapItemTile.astro";
     background="var(--brand-teal)"
     textColor="var(--white)"
 >
-    <CapItemTile heading="large format printing" description="Oversized posters, event banners, and graphics that deliver large-scale visibility for retail, events, and public spaces." image="https://plus.unsplash.com/premium_photo-1675355675326-0bdc971f2558?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/>
-    <CapItemTile heading="vehicle wraps" description="Full or partial wraps that turn cars, vans, and fleets into mobile billboards with durable finishes." image="https://images.unsplash.com/photo-1755397467747-6160983f9694?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/>
-    <CapItemTile heading="trade show & wayfinding displays" description="Booth signage, backdrops, and directional graphics that attract attention and keep crowds moving." image="https://images.unsplash.com/photo-1759721367037-232697bcd378?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/>
-    <CapItemTile heading="graphics & wall coverings" description="Custom murals, textures, and coverings that transform plain walls into branded experiences. " image="https://images.unsplash.com/photo-1732722606178-a4f40b1a9253?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw5NXx8fGVufDB8fHx8fA%3D%3D"/>
+    <CapItemTile
+        id="large-format-printing"
+        heading="large format printing"
+        description="Oversized posters, event banners, and graphics that deliver large-scale visibility for retail, events, and public spaces."
+        image="https://plus.unsplash.com/premium_photo-1675355675326-0bdc971f2558?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    />
+    <CapItemTile
+        id="vehicle-wraps"
+        heading="vehicle wraps"
+        description="Full or partial wraps that turn cars, vans, and fleets into mobile billboards with durable finishes."
+        image="https://images.unsplash.com/photo-1755397467747-6160983f9694?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    />
+    <CapItemTile
+        id="trade-show"
+        heading="trade show & wayfinding displays"
+        description="Booth signage, backdrops, and directional graphics that attract attention and keep crowds moving."
+        image="/images/capabilities_tradeshow.jpg"
+    />
+    <CapItemTile
+        id="graphics-wall-coverings"
+        heading="graphics & wall coverings"
+        description="Custom murals, textures, and coverings that transform plain walls into branded experiences. "
+        image="https://images.unsplash.com/photo-1732722606178-a4f40b1a9253?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw5NXx8fGVufDB8fHx8fA%3D%3D"
+    />
 </CapCatTile>
 
 <CapCatTile
@@ -21,11 +41,29 @@ import CapItemTile from "./CapItemTile.astro";
     description="Leave your mark. From stickers and decals to short-run digital printing for fliers, collateral, and campaign materials, these small-scale pieces are fast to produce, easy to distribute, and designed to keep your brand top of mind."
     background="var(--brand-teal)"
     textColor="var(--white)"
-    reverse=true
+    reverse="true"
 >
-    <CapItemTile heading="digital printing" description="Collateral, flyers, brochures, postcards, and short-run projects with fast turnaround and flexible options that keep campaigns moving." image="https://images.unsplash.com/photo-1755397467747-6160983f9694?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" reverse=true/>
-    <CapItemTile heading="stickers & custom decals" description="Die-cut, durable, and designed to last. Perfect for promotions, activations, and giveaways." image="https://images.unsplash.com/photo-1759721367037-232697bcd378?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" reverse=true/>
-    <CapItemTile heading="signage & window decals" description="The everyday essentials: indoor and outdoor signage like window vinyl, yard signs, and A-frames that keep your brand visible." image="https://images.unsplash.com/photo-1732722606178-a4f40b1a9253?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw5NXx8fGVufDB8fHx8fA%3D%3D" reverse=true/>
+    <CapItemTile
+        id="digital-printing"
+        heading="digital printing"
+        description="Collateral, flyers, brochures, postcards, and short-run projects with fast turnaround and flexible options that keep campaigns moving."
+        image="https://images.unsplash.com/photo-1755397467747-6160983f9694?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        reverse="true/"
+    />
+    <CapItemTile
+        id="stickers"
+        heading="stickers & custom decals"
+        description="Die-cut, durable, and designed to last. Perfect for promotions, activations, and giveaways."
+        image="/images/capabilities_stickers.jpg"
+        reverse="true/"
+    />
+    <CapItemTile
+        id="signage"
+        heading="signage & window decals"
+        description="The everyday essentials: indoor and outdoor signage like window vinyl, yard signs, and A-frames that keep your brand visible."
+        image="/images/capabilities_window.jpg"
+        reverse="true/"
+    />
 </CapCatTile>
 
 <CapCatTile
@@ -34,8 +72,18 @@ import CapItemTile from "./CapItemTile.astro";
     background="var(--brand-teal)"
     textColor="var(--white)"
 >
-    <CapItemTile heading="fulfillment" description="Print, kit, pack, and ship on time with tracking you can trust. From pick-and-pack to inventory management, we get your projects out the door and into the world." image="https://images.unsplash.com/photo-1755397467747-6160983f9694?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/>
-    <CapItemTile heading="online solutions & e-commerce" description="Branded portals and web-to-print tools make reordering simple, scalable, and stress-free." image="https://images.unsplash.com/photo-1759721367037-232697bcd378?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"/>
+    <CapItemTile
+        id="fulfillment"
+        heading="fulfillment"
+        description="Print, kit, pack, and ship on time with tracking you can trust. From pick-and-pack to inventory management, we get your projects out the door and into the world."
+        image="/images/capabilities_fulfillment.jpg"
+    />
+    <CapItemTile
+        id="online-solutions"
+        heading="online solutions & e-commerce"
+        description="Branded portals and web-to-print tools make reordering simple, scalable, and stress-free."
+        image="/images/capabilities_coding.jpg"
+    />
 </CapCatTile>
 
 <CapCatTile
@@ -43,10 +91,22 @@ import CapItemTile from "./CapItemTile.astro";
     description="More than print. From design support to promo sourcing and corporate gifting, our creative services bring your ideas full circle, making sure your brand connects across every touchpoint."
     background="var(--brand-teal)"
     textColor="var(--white)"
-    reverse=true
+    reverse="true"
 >
-    <CapItemTile heading="design services" description="File prep, layouts, and creative support that ensure your artwork is production-ready for press." image="https://images.unsplash.com/photo-1755397467747-6160983f9694?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" reverse=true/>
-    <CapItemTile heading="event promo & corporate gifting" description="Branded merchandise and thoughtful gifts that extend your campaign beyond the page. " image="https://images.unsplash.com/photo-1759721367037-232697bcd378?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" reverse=true/>
+    <CapItemTile
+        id="design"
+        heading="design services"
+        description="File prep, layouts, and creative support that ensure your artwork is production-ready for press."
+        image="https://images.unsplash.com/photo-1755397467747-6160983f9694?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        reverse="true/"
+    />
+    <CapItemTile
+        id="promo"
+        heading="event promo & corporate gifting"
+        description="Branded merchandise and thoughtful gifts that extend your campaign beyond the page. "
+        image="https://images.unsplash.com/photo-1759721367037-232697bcd378?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        reverse="true/"
+    />
 </CapCatTile>
 <!-- </div> -->
 <!-- <style>

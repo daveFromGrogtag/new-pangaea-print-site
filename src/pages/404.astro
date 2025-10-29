@@ -1,0 +1,74 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="About">
+    <div class="errorpage">
+        <div class="error-info">
+            <div>
+                <h1>Uh oh...</h1>
+                <h2>Looks like that page doesn't exist.</h2>
+            </div>
+        </div>
+        <span class="ball">404</span>
+    </div>
+</Layout>
+<style>
+    :root {
+        --width: 230px;
+        --height: calc(var(--width) / 2);
+    }
+    .errorpage {
+        height: calc(100vh - 312px);
+    }
+
+    .error-info {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .ball {
+        font-size: 7rem;
+        /* background-color: aqua; */
+        font-weight: 700;
+        width: var(--width);
+        height: var(--height);
+        line-height: 100%;
+        /* background: url("../dvd.png"); */
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+
+        animation:
+            toRight linear 6.8s infinite alternate,
+            bounce linear 17s infinite alternate;
+    }
+
+    @keyframes bounce {
+        0% {
+            top: 0;
+        }
+        48% {
+        }
+        50% {
+            top: calc(100% - var(--height));
+        }
+        52% {
+        }
+        100% {
+            top: 0;
+        }
+    }
+
+    @keyframes toRight {
+        0% {
+            left: 0;
+        }
+
+        100% {
+            left: calc(100% - var(--width));
+        }
+    }
+</style>
