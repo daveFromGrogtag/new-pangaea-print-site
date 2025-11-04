@@ -108,7 +108,8 @@ h4 {
 h1.reverse,
 h2.reverse,
 h3.reverse,
-h4.reverse {
+h4.reverse,
+p.reverse {
     color: var(--white);
 }
 

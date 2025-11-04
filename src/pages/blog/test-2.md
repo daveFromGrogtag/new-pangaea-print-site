@@ -1,9 +1,10 @@
 ---
 layout: ../../layouts/BlogPostLayout.astro
-title: Blog Post
+title: Blog Post 2
 author: dave blois
 description: Words
 image: /images/capabilities_fulfillment.jpg
+date: 2025-10-02
 ---
 This is a blog test page. Does it work?
 

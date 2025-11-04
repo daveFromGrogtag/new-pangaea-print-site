@@ -8,38 +8,64 @@ let backgroundImage = background
 ---
 
 <div class="billboard">
-<div class="billboard" style={backgroundImage}>
-    <div class="bottom-text">
-        <div class="container">
-            <div class="text-box">
-                <slot />
+    <div class="billboard-inner" style={backgroundImage}>
+        <div class="bottom-text">
+            <div class="container">
+                <div class="text-box">
+                    <slot />
+                </div>
             </div>
         </div>
+        <div class="overlay"></div>
     </div>
 </div>
 <style>
+    .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: #4a4e54;
+        background: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.8) 15%,
+            rgba(74, 78, 84, 0) 100%
+        );
+        z-index: 1;
+    }
     .billboard {
         position: relative;
         height: 100vh;
         overflow: hidden;
-
+        background: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.8) 15%,
+            rgba(74, 78, 84, 0) 100%
+        );
     }
+    .billboard-inner {
+        position: relative;
+        height: 100vh;
+        overflow: hidden;
+    }
+    
     .billboard p {
-        color: var(--teal-medium);
         font-weight: 600;
     }
     .bottom-text {
         width: 100%;
         position: absolute;
         bottom: 0;
-        background-color: ;
+        z-index: 2;
     }
 
     .text-box {
         padding: 2rem;
         max-width: 800px;
-        background: var( --brand-gold-80);
+        /* background: var( --brand-gold-80); */
         border-radius: 2rem;
+        /* z-index: 100; */
     }
 
     @media (min-width: 768px) {

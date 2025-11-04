@@ -8,18 +8,14 @@ import BiosTiles from "../components/biosTiles.astro";
 
 <Layout title="About">
 	<Billboard
-		background="https://plus.unsplash.com/premium_photo-1675355675326-0bdc971f2558?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+		background="/images/about_main.jpg"
 	>
-		<h1>yes, we print that.</h1>
-		<p class="billboard-text">
-			Pangaea Print delivers large format printing, signage, decals, wall
-			graphics, trade show displays, and fulfillment in West Sacramento
-			and beyond. We mix creative design support, digital print
-			technology, and online ordering tools to make print simple,
-			scalable, and stress-free.
+		<h1 class="reverse">good people. great print.</h1>
+		<p class="reverse">
+			We're a creative print shop in West Sacramento with a serious respect for the craft. And a team that actually loves what they do.
 		</p>
 		<div class="spacer-1"></div>
-		<Button label="Say hi" variant="btn-standard" link="/" />
+		<Button label="Mett the Team" variant="btn-standard" link="/" />
 	</Billboard>
 	<section class="why-pangaea">
 		<div class="container">
@@ -34,7 +30,7 @@ import BiosTiles from "../components/biosTiles.astro";
 					<div class="spacer-32px"></div>
 
 					<p>
-					We didn't set out to be just another print shop. We started
+					<b>We didn't set out to be just another print shop.</b> We started
 					Pangaea because we knew printing could be smarter, faster, and a
 					hell of a lot more fun. After years in the industry, we were
 					tired of doing things the old way so we built something better:
@@ -53,8 +49,8 @@ import BiosTiles from "../components/biosTiles.astro";
 					story, and we take that seriously. That's what keeps us coming back,
 					sleeves rolled, ink-stained, and ready for whatever comes next.
 					</p>
-					<Button label="Start a Project" link="/" variant="btn-standard"/><span class="spacer-1"></span>
-					<Button label="Meet the Team" link="/" variant="btn-outline" />
+					<Button label="Ready to roll?" link="/" variant="btn-standard"/><span class="spacer-1"></span>
+					<Button label="Explore Capabilities" link="/" variant="btn-outline" />
 				</div>
 				<!-- <div class="spacer-1"></div> -->
 			</div>
@@ -64,7 +60,9 @@ import BiosTiles from "../components/biosTiles.astro";
 	<section class="bios">
 		<div class="container">
 			<div class="bios-intro">
-				<h3 class="serious">serious about prints<br> not so serious about bios</h3>
+				<div class="spacer-1"></div>
+				<h2>serious about prints<br> not so serious about bios</h2>
+				<br>
 				<p>
 					<b>
 						We could ist our experience... but where's the fun in that?
@@ -74,9 +72,11 @@ import BiosTiles from "../components/biosTiles.astro";
 			</div>
 			<div class="bios-tiles">
 				<BiosTiles
-					lie1="LIE ONE!!!";
+					name="Dave Blois"
+					lie1="LIE ONE!!!"
 					lie2="Lie two"
 					lie3="Also a lie"
+					staffImage="/images/about_main.jpg"
 				/>
 				<BiosTiles
 					lie1="LIE ONE!!!";
