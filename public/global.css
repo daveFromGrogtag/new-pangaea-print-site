@@ -6,23 +6,24 @@
     --teal-medium: #008D9A;
     --charcoal-main: #4a4e54;
     --grey-text: #64605D;
+    --dark-grey-text: #4B4F54;
     --white: white;
     --off-white: #FBF6EF;
     --extra-light-grey: #E0E0E0;
-    
+
     --brand-gold-80: #FFC658CC;
-    
+
 
     /* header font info */
     --header-font-family: "bryant-web", sans-serif;
     --header-font-weight: 700;
     --header-font-style: normal;
-    
+
     /* paragraph font info */
     --para-font-family: "canada-type-gibson", sans-serif;
     --para-font-weight: 400;
     --para-font-style: normal;
-    
+
 }
 
 html {
@@ -41,11 +42,13 @@ h1 {
     font-weight: var(--header-font-weight);
     font-style: var(--header-font-style);
     /* font-size: 48px; */
-    font-size: 3rem;
+    font-size: 4.5rem;
     color: var(--teal-medium);
     text-transform: lowercase;
     line-height: 1;
 }
+
+
 
 
 h2 {
@@ -53,10 +56,14 @@ h2 {
     font-weight: var(--header-font-weight);
     font-style: var(--header-font-style);
     /* font-size: 36px; */
-    font-size: 2.25rem;
+    font-size: 3.5rem;
     color: var(--teal-medium);
     text-transform: lowercase;
-    line-height: 1;    
+    /* line-height: 1; */
+    line-height: 67px;
+    letter-spacing: -0.02em;
+
+
 }
 
 h3 {
@@ -64,10 +71,28 @@ h3 {
     font-weight: var(--header-font-weight);
     font-style: var(--header-font-style);
     /* font-size: 28px; */
-    font-size: 1.75rem;
+    font-size: 2rem;
     color: var(--teal-medium);
     text-transform: lowercase;
-    line-height: 1;
+    /* line-height: 1; */
+    line-height: 40px;
+
+    letter-spacing: -0.02em;
+
+
+}
+
+h3.serious {
+
+    font-family: var(--para-font-family);
+    font-weight: 600;
+    font-style: var(--header-font-style);
+
+    font-size: 1.75rem;
+    line-height: 36px;
+
+    text-transform: capitalize;
+
 }
 
 h4 {
@@ -80,7 +105,10 @@ h4 {
     text-transform: uppercase;
 }
 
-h1.reverse, h2.reverse, h3.reverse, h4.reverse {
+h1.reverse,
+h2.reverse,
+h3.reverse,
+h4.reverse {
     color: var(--white);
 }
 
@@ -89,9 +117,15 @@ p {
     font-weight: var(--para-font-weight);
     font-style: var(--para-font-style);
     /* font-size: 18px; */
-    font-size: 1.125rem;
-    color: var(--charcoal-main);
+    font-size: 1.25rem;
+    color: var(--dark-grey-text);
     padding-bottom: 1rem;
+    line-height: 35px;
+}
+
+small {
+    font-size: 1rem;
+    line-height: 24px;
 }
 
 .billboard-text {
@@ -123,21 +157,27 @@ p b {
 .color-square.brand-orange {
     background-color: var(--brand-orange);
 }
+
 .color-square.brand-gold {
     background-color: var(--brand-gold);
 }
+
 .color-square.brand-teal {
     background-color: var(--brand-teal);
 }
+
 .color-square.teal-medium {
     background-color: var(--teal-medium);
 }
+
 .color-square.charcoal-main {
     background-color: var(--charcoal-main);
 }
+
 .color-square.white {
     background-color: var(--white);
 }
+
 .color-square.off-white {
     background-color: var(--off-white);
 }
@@ -155,6 +195,11 @@ span.spacer-1 {
     padding: .5rem;
 }
 
+div.spacer-144 {
+    height: 144px;
+    width: 144px;
+}
+
 .why-pangaea {
     margin: 5rem 0;
 }
@@ -167,10 +212,10 @@ span.spacer-1 {
 
 .why-pangaea .logo-image-container img {
     width: 100%;
-    height: auto; 
+    height: auto;
 }
 
-.we-print{
+.we-print {
     padding: 5rem 0;
     background: var(--brand-teal);
     text-align: center;
@@ -203,9 +248,10 @@ span.spacer-1 {
         grid-template-columns: 1fr 1fr;
         gap: 1rem;
     }
+
     .billboard-text {
-    font-size: 1.5rem;
-}
+        font-size: 1.5rem;
+    }
 }
 
 /* .container {background-color: red;} */

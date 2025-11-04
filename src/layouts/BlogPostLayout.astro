@@ -1,31 +1,54 @@
 ---
-const {frontmatter} = Astro.props;
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+const { frontmatter } = Astro.props;
 ---
-<html>
+
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <!-- <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> -->
     <meta name="generator" content={Astro.generator} />
-    <link rel="stylesheet" href="https://use.typekit.net/yns1vuo.css">
-	<link rel="stylesheet" href="/global.css">
-
+    <link rel="stylesheet" href="/reset.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/yns1vuo.css" />
+    <link rel="stylesheet" href="/global.css" />
+    <link
+      rel="stylesheet"
+      href="https://resources.public.infigosoftware.rocks/frontend/font-awesome-css/v6/all.min.css"
+      type="text/css"
+    />
+    <title>{frontmatter.title} | Pangaea Print</title>
   </head>
   <!-- ... -->
-  <h1>{frontmatter.title}</h1>
-  <h2>Post author: {frontmatter.author}</h2>
-  <p>{frontmatter.description}</p>
-  <slot /> <!-- Markdown content is injected here -->
-  <!-- ... -->
+  <body>
+    <Header />
+    <div class="spacer-144"></div>
+    <div class="blog-image-box">
+      {frontmatter.image && <img src={frontmatter.image} alt={frontmatter.title}>}
+    </div>
+    <div class="container">
+      <h1>{frontmatter.title}</h1>
+      <h2>Post author: {frontmatter.author}</h2>
+      <h5>{frontmatter.description}</h5>
+
+      <slot />
+    </div>
+    <Footer />
+  </body>
 </html>
 <style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-	h1 {
-		color: steelblue;
-	}
+  .blog-image-box {
+    max-height: 300px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+  }
+  .blog-image-box img {
+    width: 100%;
+  }
 </style>

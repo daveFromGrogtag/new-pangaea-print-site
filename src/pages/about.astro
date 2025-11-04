@@ -3,16 +3,113 @@ import Layout from "../layouts/Layout.astro";
 import Billboard from "../components/Billboard.astro";
 import Button from "../components/Button.astro";
 import AboutUsScrollContainer from "../components/aboutUsScrollContainer.astro";
-
+import BiosTiles from "../components/biosTiles.astro";
 ---
+
 <Layout title="About">
-    <Billboard background="https://plus.unsplash.com/premium_photo-1675355675326-0bdc971f2558?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+	<Billboard
+		background="https://plus.unsplash.com/premium_photo-1675355675326-0bdc971f2558?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+	>
 		<h1>yes, we print that.</h1>
 		<p class="billboard-text">
-			Pangaea Print delivers large format printing, signage, decals, wall graphics, trade show displays, and fulfillment in West Sacramento and beyond. We mix creative design support, digital print technology, and online ordering tools to make print simple, scalable, and stress-free.  
+			Pangaea Print delivers large format printing, signage, decals, wall
+			graphics, trade show displays, and fulfillment in West Sacramento
+			and beyond. We mix creative design support, digital print
+			technology, and online ordering tools to make print simple,
+			scalable, and stress-free.
 		</p>
 		<div class="spacer-1"></div>
 		<Button label="Say hi" variant="btn-standard" link="/" />
 	</Billboard>
-    <AboutUsScrollContainer/>
+	<section class="why-pangaea">
+		<div class="container">
+			<div class="section-pair">
+				<div class="logo-image-container">
+					<div>
+						<img src="/assets/small-logo.png" alt="Pangaea Print" />
+					</div>
+				</div>
+				<div>
+					<h2>Why print with pangaea</h2>
+					<div class="spacer-32px"></div>
+
+					<p>
+					We didn't set out to be just another print shop. We started
+					Pangaea because we knew printing could be smarter, faster, and a
+					hell of a lot more fun. After years in the industry, we were
+					tired of doing things the old way so we built something better:
+					a place focused on people, process, and the thrill of making
+					something real.
+					</p>
+					<p>
+					At our shop in West Sacramento, you'll find us surrounded by color
+					swatches, test prints, and the steady hum of machines doing their
+					thing. We geek out over materials, chase better workflows, and still
+					get a little rush when the first perfect print rolls off the press.
+					</p>
+					<p>
+					For us, print is more than the final product — it's the connection
+					it creates. Every banner, decal, and sticker we make tells someone's
+					story, and we take that seriously. That's what keeps us coming back,
+					sleeves rolled, ink-stained, and ready for whatever comes next.
+					</p>
+					<Button label="Start a Project" link="/" variant="btn-standard"/><span class="spacer-1"></span>
+					<Button label="Meet the Team" link="/" variant="btn-outline" />
+				</div>
+				<!-- <div class="spacer-1"></div> -->
+			</div>
+		</div>
+	</section>	
+	<AboutUsScrollContainer />
+	<section class="bios">
+		<div class="container">
+			<div class="bios-intro">
+				<h3 class="serious">serious about prints<br> not so serious about bios</h3>
+				<p>
+					<b>
+						We could ist our experience... but where's the fun in that?
+					</b><br>
+					Let's play two truths and a lie. Think you can spot the fakes?
+				</p>
+			</div>
+			<div class="bios-tiles">
+				<BiosTiles
+					lie1="LIE ONE!!!";
+					lie2="Lie two"
+					lie3="Also a lie"
+				/>
+				<BiosTiles
+					lie1="LIE ONE!!!";
+					lie2="Lie two"
+					lie3="Also a lie"
+				/>
+				<BiosTiles
+					lie1="LIE ONE!!!";
+					lie2="Lie two"
+					lie3="Also a lie"
+				/>
+				<BiosTiles
+					lie1="LIE ONE!!!";
+					lie2="Lie two"
+					lie3="Also a lie"
+				/>
+			</div>
+		</div>
+	</section>
 </Layout>
+<style>
+	.bios-intro {
+		text-align: center;
+	}
+	.bio-tile {
+		background-color: red;
+	}
+
+    @media (min-width: 768px) {
+        .bios-tiles {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr; /* 3 equal columns */
+        }
+    }
+</style>

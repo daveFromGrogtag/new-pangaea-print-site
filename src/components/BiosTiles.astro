@@ -1,0 +1,25 @@
+---
+const {lie1, lie2, lie3, name} = Astro.props
+---
+<div>
+    {lie1}<br>
+    {lie2}<br>
+    {lie3}
+</div>
+<style>
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: var(--extra-light-grey);
+        padding: 2rem;
+        margin: .5rem;
+        aspect-ratio: 1 / 1;
+        border-radius: 50%;
+        transition: border-radius 300ms ease, background 100ms ease
+    }
+    div:hover {
+        border-radius: 0;
+        background: var(--brand-gold);
+    }
+</style>
