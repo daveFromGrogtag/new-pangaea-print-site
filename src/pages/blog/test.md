@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/BlogPostLayout.astro
-title: Blog Post
+title: Shelf it, fulfill my order
 author: dave blois
 description: Words
 image: /images/capabilities_fulfillment.jpg

@@ -1,9 +1,9 @@
 ---
 layout: ../../layouts/BlogPostLayout.astro
-title: Blog Post 5
+title: does not compute
 author: dave blois
-description: Words
-image: /images/capabilities_fulfillment.jpg
+description: modern software and print. what can it do?
+image: /images/coding.jpg
 date: 2025-10-05
 ---
 This is a blog test page. Does it work?

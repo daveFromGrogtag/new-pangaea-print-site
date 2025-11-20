@@ -1,8 +1,8 @@
 ---
 layout: ../../layouts/BlogPostLayout.astro
-title: Blog Post 3
+title: how to setup cutlines
 author: dave blois
-description: Words
+description: for those who don't know how to setup cutlines, here's a handy guide
 image: /images/capabilities_fulfillment.jpg
 date: 2025-10-03
 ---

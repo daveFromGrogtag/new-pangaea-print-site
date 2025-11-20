@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/BlogPostLayout.astro
-title: Blog Post 2
+title: cmyk vs. rgb
 author: dave blois
 description: Words
 image: /images/capabilities_fulfillment.jpg

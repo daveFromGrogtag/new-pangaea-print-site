@@ -1,0 +1,15 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Billboard from "../components/Billboard.astro";
+import Button from "../components/Button.astro";
+---
+<Layout title="Thank you!">
+    <Billboard background="/images/dog-on-shelf.jpg">
+		<h1>Thank you!</h1>
+		<p class="billboard-text">
+            Thanks for reaching out. We'll get back to you as soon as we can.
+		</p>
+		<div class="spacer-1"></div>
+		<Button label="Back home" variant="btn-standard" link="/" />
+	</Billboard>
+</Layout>

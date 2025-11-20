@@ -1,8 +1,8 @@
 ---
 layout: ../../layouts/BlogPostLayout.astro
-title: Blog Post 4
+title: substrate thickness and you
 author: dave blois
-description: Words
+description: how thick is my paper? what does that mean?
 image: /images/capabilities_fulfillment.jpg
 date: 2025-10-04
 ---

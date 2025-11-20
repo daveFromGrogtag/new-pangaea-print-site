@@ -1,10 +1,13 @@
 ---
-const { lie1, lie2, lie3, name, staffImage } = Astro.props;
+const { lie1, lie2, lie3, name, title, staffImage } = Astro.props;
 ---
 
 <div class="staffContainer">
-    <div class="staffText">
+    <div class="staffTitle">
         <h3>{name}</h3>
+        <h4>{title}</h4>
+    </div>
+    <div class="staffText">
         <p>
             {lie1}
         </p>
@@ -20,6 +23,42 @@ const { lie1, lie2, lie3, name, staffImage } = Astro.props;
     </div>
 </div>
 <style>
+    div.staffContainer .staffTitle h4, div.staffContainer .staffTitle h3 {
+        padding: 0 20px;
+        background-color: var(--brand-gold-80);
+        color: var(--brand-teal);
+    }
+    /* div.staffContainer p{
+        font-size: 1rem;
+        opacity: 0;
+        transition: opacity 500ms ease;
+        text-align: center;
+    }
+
+    div.staffContainer:hover p {
+        opacity: 1;
+    } */
+    
+    div.staffContainer .staffTitle {
+        display: block;
+        z-index: 2;
+    }
+
+    div.staffContainer .staffText {
+        display: none;
+    }
+
+    div.staffContainer:hover .staffTitle {
+        display: none;
+    }
+
+    div.staffContainer:hover .staffText {
+        display: block;
+    }
+
+    div.staffContainer h3, div.staffContainer h4 {
+    }
+
     div.staffContainer {
         display: flex;
         justify-content: center;
@@ -34,6 +73,7 @@ const { lie1, lie2, lie3, name, staffImage } = Astro.props;
             background 100ms ease;
         overflow: hidden;
         position: relative;
+        text-align: center
     }
     div.staffContainer:hover {
         border-radius: 0;
@@ -50,6 +90,13 @@ const { lie1, lie2, lie3, name, staffImage } = Astro.props;
         right: 0;
         z-index: 1;
     }
+    .staffImage img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center; 
+    }
+
     div.staffContainer .staffImage {
         opacity: 1;
         transition: opacity 500ms ease;

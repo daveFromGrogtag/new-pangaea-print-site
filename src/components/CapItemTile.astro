@@ -1,5 +1,5 @@
 ---
-const { heading, description, image, id, reverse = false } = Astro.props;
+const { heading, description, image, id, reverse = false, link } = Astro.props;
 ---
 
 <div
@@ -11,6 +11,7 @@ const { heading, description, image, id, reverse = false } = Astro.props;
         <div class="item-text">
             <h3>{heading}</h3>
             <p>{description}</p>
+            {link && (<p><a href={link}>Read more</a></p>)}
         </div>
     </div>
 </div>
@@ -18,11 +19,12 @@ const { heading, description, image, id, reverse = false } = Astro.props;
     .item-tile {
         height: 100vh;
         display: flex;
-        align-items: center;
-        justify-content: center;
+        align-items: flex-end;
+        justify-content: flex-end;
     }
     .reverse.item-tile {
-        justify-content: center;
+        align-items: flex-end;
+        justify-content: flex-start;
     } 
     .item-text {
         /* padding: 2rem; */
@@ -39,11 +41,13 @@ const { heading, description, image, id, reverse = false } = Astro.props;
     }
 
     .bubble {
+        --bubble-width: 500px;
+        --bubble-border-radius: calc(var(--bubble-width)/2.4);
         background-color: var(--brand-gold-80);
-        border-radius: 10rem 10rem 0 10rem;
-        width: 385px;
-        height: 327px;
-        margin: 2rem;
+        border-radius: var(--bubble-border-radius) var(--bubble-border-radius) 0 var(--bubble-border-radius);
+        width: var(--bubble-width);
+        aspect-ratio: 39 / 33;
+        margin: 10rem;
         padding: 4rem;
         display: flex;
         justify-content: center;
@@ -51,11 +55,13 @@ const { heading, description, image, id, reverse = false } = Astro.props;
     }
 
     .reverse.bubble {
+        --bubble-width: 500px;
+        --bubble-border-radius: calc(var(--bubble-width)/2.4);
         background-color: var(--brand-gold-80);
-        border-radius: 10rem 10rem 10rem 0;
-        width: 385px;
-        height: 327px;
-        margin: 2rem;
+        border-radius: var(--bubble-border-radius) var(--bubble-border-radius) var(--bubble-border-radius) 0;
+        width: var(--bubble-width);
+        aspect-ratio: 39 / 33;
+        margin: 10rem;
         padding: 4rem;
         display: flex;
         justify-content: center;
@@ -72,6 +78,12 @@ const { heading, description, image, id, reverse = false } = Astro.props;
         text-align: left;
     }
 
+    @media (max-width: 1350px) {
+        .reverse.bubble, .bubble {
+            margin: 2rem;
+        }
+    }
+
     /* .item-text {
         padding: 2rem;
         backdrop-filter: blur(4px) saturate(20%);
@@ -82,3 +94,5 @@ const { heading, description, image, id, reverse = false } = Astro.props;
         transition: backdrop-filter linear 200ms;
     } */
 </style>
+
+

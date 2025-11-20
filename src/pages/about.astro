@@ -8,7 +8,7 @@ import BiosTiles from "../components/BiosTiles.astro";
 
 <Layout title="About">
 	<Billboard
-		background="/images/about_main.jpg"
+		background="/images/doorway-colex.jpg"
 	>
 		<h1 class="reverse">good people. great print.</h1>
 		<p class="reverse">
@@ -26,7 +26,7 @@ import BiosTiles from "../components/BiosTiles.astro";
 					</div>
 				</div>
 				<div>
-					<h2>Why print with pangaea</h2>
+					<h2>How it all rolled out.</h2>
 					<div class="spacer-32px"></div>
 
 					<p>
@@ -57,7 +57,7 @@ import BiosTiles from "../components/BiosTiles.astro";
 		</div>
 	</section>	
 	<AboutUsScrollContainer />
-	<section class="bios">
+	<section class="bios" id="meet-the-team">
 		<div class="container">
 			<div class="bios-intro">
 				<div class="spacer-1"></div>
@@ -72,34 +72,54 @@ import BiosTiles from "../components/BiosTiles.astro";
 			</div>
 			<div class="bios-tiles">
 				<BiosTiles
+					name="Todd Fulton"
+					title="owner and head honcho"
+					lie1="Captured a purse snatcher while backpacking across Europe."
+					lie2="Completed Ironman Canada."
+					lie3="Repelled from a helicopter fighting forest fires as a Hotshot."
+					staffImage="/images/dog-stretch.jpg"
+				/>
+				
+				<BiosTiles
 					name="Dave Blois"
-					lie1="LIE ONE!!!"
-					lie2="Lie two"
-					lie3="Also a lie"
-					staffImage="/images/about_main.jpg"
+					title="techical person"
+					lie1="Wrote Pangaea's print automation software from scratch."
+					lie2="Wrote a progressive rock opera about the Russian Space program; Sputnik and the Red Planet"
+					lie3="Once shared a bag of Goldfish crackers with Clint Eastwood."
+					staffImage="/images/PXL_20251108_184314510.jpg"
 				/>
 				<BiosTiles
-					lie1="LIE ONE!!!";
-					lie2="Lie two"
-					lie3="Also a lie"
+					name="Jesseyln !@#$%!"
+					title="head of production"
+					lie1="Has never used TikTok.";
+					lie2="Accidentally showed up to work on her day off."
+					lie3="Can recite the alphabet backwards."
+					staffImage="/images/troll.jpg"
 				/>
 				<BiosTiles
-					lie1="LIE ONE!!!";
-					lie2="Lie two"
-					lie3="Also a lie"
+					name="Jessica Coy-Rodriguez"
+					title="marketing and design"
+					lie1="Ghostwrote a breakup text that went viral.";
+					lie2="Replaced her car's climate control unit armed with only YouTube and self-confidence. "
+					lie3="Once sourced a gift for the Princess of Sweden."
+					staffImage="/images/design.jpg"
 				/>
 				<BiosTiles
-					lie1="LIE ONE!!!";
-					lie2="Lie two"
-					lie3="Also a lie"
+					name="Charizza Ventanilla"
+					title="project coordinator"
+					lie1="Is a master multitasker";
+					lie2="Would fill her house with dogs if her husband would let her"
+					lie3="Like pluto, is considered to be one of the smaller planets in the solar system."
 				/>
 			</div>
 		</div>
+		<div class="spacer-144"></div>
 	</section>
 </Layout>
 <style>
 	.bios-intro {
 		text-align: center;
+		margin: 5rem auto 3rem auto;
 	}
 	.bio-tile {
 		background-color: red;
@@ -109,7 +129,7 @@ import BiosTiles from "../components/BiosTiles.astro";
         .bios-tiles {
             width: 100%;
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr; /* 3 equal columns */
+            grid-template-columns: 1fr 1fr 1fr;
         }
     }
 </style>

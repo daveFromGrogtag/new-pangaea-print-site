@@ -1,0 +1,17 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Billboard from "../../components/Billboard.astro";
+import Button from "../../components/Button.astro";
+import CapabilitiesScrollContainer from "../../components/CapabilitiesScrollContainer.astro"
+---
+<Layout title="Capabilities">
+    <Billboard background="/images/samples.jpg">
+		<h1 class="reverse">yes, we print that.</h1>
+		<p class="reverse">
+			Pangaea Print delivers large format printing, signage, decals, wall graphics, trade show displays, and fulfillment in West Sacramento and beyond. We mix creative design support, digital print technology, and online ordering tools to make print simple, scalable, and stress-free. 
+		</p>
+		<div class="spacer-1"></div>
+		<Button label="Say hi" variant="btn-standard" link="/" />
+	</Billboard>
+    <CapabilitiesScrollContainer/>
+</Layout> 

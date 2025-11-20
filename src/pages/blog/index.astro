@@ -1,55 +1,145 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import Billboard from "../../components/Billboard.astro";
 const allPosts = await Astro.glob("./*.md")
 const sortedPosts = allPosts.sort((a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date))
 const recentPosts = sortedPosts.slice(0, 3);
 const olderPosts = sortedPosts.slice(3);
 ---
 <Layout title="Home">
-  <section class="recent-posts">
-  {recentPosts.map(post => (
-    <div class="post recent">
-        <a href={`.${post.url}/`}>
-          <div class="blog-thumb">{post.frontmatter.image && <img src={post.frontmatter.image} alt={post.frontmatter.title} />}</div>
-          <div>
-            <div>{post.frontmatter.title}</div>
-            <small>{new Date(post.frontmatter.date).toLocaleDateString()}</small>
-          </div>
-        </a>
+  <div class="spacer-144"></div>
+  <!-- <Billboard background="/images/samples.jpg">
+		<h1 class="reverse">yes, we print that.</h1>
+		<p class="reverse">
+			Pangaea Print delivers large format printing, signage, decals, wall graphics, trade show displays, and fulfillment in West Sacramento and beyond. We mix creative design support, digital print technology, and online ordering tools to make print simple, scalable, and stress-free. 
+		</p>
+	</Billboard> -->
+  <div class="container">
+    <h1>Blog posts</h1>
+    <div class="spacer-32px"></div>
+    <section class="recent-posts-section">
+      <h2>recent posts</h2>
+      <div class="recent-posts">
+    {recentPosts.map(post => (
+      <div class="post recent">
+          <a href={`.${post.url}/`}>
+            <div class="blog-thumb">{post.frontmatter.image && <img src={post.frontmatter.image} alt={post.frontmatter.title} />}</div>
+            <div class="post-text">
+              <div>
+                <div class="post-title">{post.frontmatter.title}</div>
+                <small>{post.frontmatter.author}</small><br/>
+                <small>{new Date(post.frontmatter.date).toLocaleDateString()}</small>
+              </div>
+            </div>
+          </a>
+        </div>
+      ))}
       </div>
-    ))}
-  </section>
-
-<section class="post-list">
-    {olderPosts.map(post => (
-      <div class="post">
-        <a href={`.${post.url}/`}>
-          <div>
-            <div>{post.frontmatter.title}</div>
-            <small>{new Date(post.frontmatter.date).toLocaleDateString()}</small>
-          </div>
-        </a>
-      </div>
-    ))}
-  </section>
+    </section>
+  <div class="spacer-32px"></div>
+  <section class="post-list">
+    <h2>All posts</h2>
+      {olderPosts.map(post => (
+        <div class="post">
+          <a href={`.${post.url}/`}>
+            <div>
+              <div class="post-title">{post.frontmatter.title}</div>
+              <small>{post.frontmatter.author}, {new Date(post.frontmatter.date).toLocaleDateString()}</small><br/>
+              <small>{post.frontmatter.description}</small><br/>
+            </div>
+          </a>
+          <hr/>
+        </div>
+      ))}
+    </section>
+  </div>
 </Layout>
 <style>
-  .post.recent {
-    background-color: var(--white);
+  a {
+    text-decoration: none;
+    color: var(--brand-teal);
   }
-.blog-thumb {
+
+  .post.recent {
+    padding: 1rem;
+    position: relative;
+  }
+
+  .post-text {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .post-title {
+    font-size: 2rem;
+  }
+
+  small {
+    font-size: 1rem;
+    text-transform: uppercase;
+  }
+
+  .post-text small, .post-text .post-title {
+    background-color: var(--brand-gold-80);
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+.post.recent .blog-thumb {
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
   aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  filter: blur(0);
+  transition: border-radius 500ms ease;
 }
+.post.recent .blog-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: blur(0px);
+    transition: filter 500ms ease;
+}
+
+.post.recent:hover .blog-thumb img {
+    filter: blur(10px);
+    transition: filter 500ms ease;
+}
+
+.post.recent:hover .blog-thumb {
+  border-radius: 0;
+    transition: border-radius 500ms ease;
+}
+
+.post-list {
+  margin: auto;
+  max-width: 700px;
+}
+
+.post-list .post {
+  margin-bottom: 1rem;
+}
+
+.post-list .post:hover a {
+  color: var(--teal-medium);
+}
+
   @media (min-width: 768px) {
         .recent-posts {
             width: 100%;
             display: grid;
             grid-template-columns: 1fr 1fr 1fr; /* 3 equal columns */
+            /* gap: 2rem; */
         }
+      
     }
 </style>
 
