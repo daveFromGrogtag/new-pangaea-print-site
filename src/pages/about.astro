@@ -11,11 +11,12 @@ import BiosTiles from "../components/BiosTiles.astro";
 		background="/images/doorway-colex.jpg"
 	>
 		<h1 class="reverse">good people. great print.</h1>
-		<p class="reverse">
+		<div class="spacer-32px"></div>
+		<p class="reverse billboard-para">
 			We're a creative print shop in West Sacramento with a serious respect for the craft. And a team that actually loves what they do.
 		</p>
 		<div class="spacer-1"></div>
-		<Button label="Meet the Team" variant="btn-standard" link="/" />
+		<Button label="Meet the Team" variant="btn-standard" link="/about#meet-the-team" />
 	</Billboard>
 	<section class="why-pangaea">
 		<div class="container">
@@ -49,8 +50,8 @@ import BiosTiles from "../components/BiosTiles.astro";
 					story, and we take that seriously. That's what keeps us coming back,
 					sleeves rolled, ink-stained, and ready for whatever comes next.
 					</p>
-					<Button label="Ready to roll?" link="/" variant="btn-standard"/><span class="spacer-1"></span>
-					<Button label="Explore Capabilities" link="/" variant="btn-outline" />
+					<Button label="Ready to roll?" link="/contact" variant="btn-standard"/><span class="spacer-1"></span>
+					<Button label="Explore Capabilities" link="/capabilities" variant="btn-outline" />
 				</div>
 				<!-- <div class="spacer-1"></div> -->
 			</div>
@@ -67,7 +68,7 @@ import BiosTiles from "../components/BiosTiles.astro";
 					<b>
 						We could ist our experience... but where's the fun in that?
 					</b><br>
-					Let's play two truths and a lie. Think you can spot the fakes?
+					Let's play <i>Two</i> Truths and a Lie. Think you can spot the fakes?
 				</p>
 			</div>
 			<div class="bios-tiles">
@@ -82,9 +83,9 @@ import BiosTiles from "../components/BiosTiles.astro";
 				
 				<BiosTiles
 					name="Dave Blois"
-					title="techical person"
+					title="technical person"
 					lie1="Wrote Pangaea's print automation software from scratch."
-					lie2="Wrote a progressive rock opera about the Russian Space program; Sputnik and the Red Planet"
+					lie2="Wrote a progressive rock opera about the Russian Space program: 'Sputnik and the Red Planet'."
 					lie3="Once shared a bag of Goldfish crackers with Clint Eastwood."
 					staffImage="/images/PXL_20251108_184314510.jpg"
 				/>
@@ -107,8 +108,8 @@ import BiosTiles from "../components/BiosTiles.astro";
 				<BiosTiles
 					name="Charizza Ventanilla"
 					title="project coordinator"
-					lie1="Is a master multitasker";
-					lie2="Would fill her house with dogs if her husband would let her"
+					lie1="Is a master multitasker.";
+					lie2="Would fill her house with dogs if her husband would let her."
 					lie3="Like pluto, is considered to be one of the smaller planets in the solar system."
 				/>
 			</div>

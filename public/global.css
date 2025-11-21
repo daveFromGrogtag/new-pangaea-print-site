@@ -136,6 +136,11 @@ small {
     color: var(--teal-medium);
 }
 
+p.billboard-para {
+    font-size: 1.75rem;
+    line-height: 2.75rem;
+}
+
 p b {
     font-weight: 600;
 }
