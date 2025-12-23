@@ -1,14 +1,18 @@
 :root {
     /* colors */
-    --brand-orange: #E35205;
+    /* --brand-orange: #E35205; */
+    --brand-orange: #C84904;
     --brand-teal: #004852;
     --brand-gold: #FFC658;
-    --teal-medium: #008D9A;
+    /* --teal-medium: #008D9A; */
+    --teal-medium: #04808b;
+
     --charcoal-main: #4a4e54;
     --grey-text: #64605D;
     --dark-grey-text: #4B4F54;
     --white: white;
-    --off-white: #FBF6EF;
+    /* --off-white: #FBF6EF; */
+    --off-white: #FEFCF8;
     --extra-light-grey: #E0E0E0;
 
     --brand-gold-80: #FFC658CC;
